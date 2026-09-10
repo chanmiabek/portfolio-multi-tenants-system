@@ -8,7 +8,7 @@ export default function Home() {
   const [skills, setSkills] = useState('');
 
   const handleSubmit = async () => {
-    const res =  await fetch('http://localhost:8080/api/tenants',{
+    const res =  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tenants`,{
       method: 'POST',
       headers:{'content-type':'application/json'},
       body: JSON.stringify({
